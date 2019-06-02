@@ -675,7 +675,7 @@
         int progress = round(totalBytesWritten * 100 / (double)totalBytesExpectedToWrite);
         NSNumber *lastProgress = _runningTaskById[taskId][KEY_PROGRESS];
         if (([lastProgress intValue] == 0 || (progress > [lastProgress intValue] + STEP_UPDATE) || progress == 100) && progress != [lastProgress intValue]) {
-            [self sendUpdateProgressForTaskId:taskId inStatus:@(STATUS_RUNNING) andProgress:@(progress)];
+            // [self sendUpdateProgressForTaskId:taskId inStatus:@(STATUS_RUNNING) andProgress:@(progress)];
             _runningTaskById[taskId][KEY_PROGRESS] = @(progress);
         }
     }

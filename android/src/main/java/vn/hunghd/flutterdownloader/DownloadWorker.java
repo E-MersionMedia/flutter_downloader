@@ -202,7 +202,7 @@ public class DownloadWorker extends Worker {
                     if ((lastProgress == 0 || progress > lastProgress + STEP_UPDATE || progress == 100)
                             && progress != lastProgress) {
                         lastProgress = progress;
-                        updateNotification(context, filename, DownloadStatus.RUNNING, progress, null);
+                        //updateNotification(context, filename, DownloadStatus.RUNNING, progress, null);
 
                         // This line possibly causes system overloaded because of accessing to DB too many ?!!!
                         // but commenting this line causes tasks loaded from DB missing current downloading progress,
